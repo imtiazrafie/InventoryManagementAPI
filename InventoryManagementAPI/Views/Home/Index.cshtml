@@ -1,0 +1,41 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<br />
+<div class="p-5 text-dark rounded shadow">
+	<h1 class="display-3 fw-bold">Welcome to Inventory Management System</h1>
+	<p class="lead">Effortlessly track, manage, and optimize your inventory.</p>
+</div>
+<div class="row mt-5">
+	<div class="col-md-4">
+		<div class="card feature-card shadow-sm">
+			<div class="card-body">
+				<i class="bi bi-people display-4 text-success"></i>
+				<h5 class="card-title mt-3">Supplier Management</h5>
+				<p class="card-text">Keep track of all your suppliers efficiently.</p>
+				<a class="btn btn-outline-success" asp-controller="Suppliers" asp-action="Index">Explore</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="card feature-card shadow-sm">
+			<div class="card-body">
+				<i class="bi bi-box-seam display-4 text-primary"></i>
+				<h5 class="card-title mt-3">Manage Products</h5>
+				<p class="card-text">Easily add, update, and categorize products.</p>
+				<a class="btn btn-outline-primary" asp-controller="Products" asp-action="Index">Explore</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="card feature-card shadow-sm">
+			<div class="card-body">
+				<i class="bi bi-cart-check display-4 text-warning"></i>
+				<h5 class="card-title mt-3">Purchase Orders</h5>
+				<p class="card-text">Streamline purchase orders with ease.</p>
+				<a class="btn btn-outline-warning" asp-controller="Purchases" asp-action="Index">Explore</a>
+			</div>
+		</div>
+	</div>
+</div>

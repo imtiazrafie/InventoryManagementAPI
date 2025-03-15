@@ -1,0 +1,48 @@
+﻿@model InventoryManagementAPI.Models.Purchase
+
+<br />
+<div class="container mt-6">
+    <div class="card shadow-lg">
+        <div class="card-header bg-dark text-white">
+			<h3 class="mb-0">Create New Purchase</h3>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                <div class="mb-5">
+					<label asp-for="ProductName" class="form-label">Product Name</label>
+					<input asp-for="ProductName" class="form-control" placeholder="Enter Product Name" required/>
+					<span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                <div class="mb-5">
+					<label asp-for="PurchasePrice" class="form-label">Purchase Price</label>
+					<input asp-for="PurchasePrice" class="form-control" step="0.01" placeholder="Enter Purchase Price" required />
+					<span asp-validation-for="PurchasePrice" class="text-danger"></span>
+                </div>
+				<div class="mb-5">
+					<label asp-for="Quantity" class="form-label">Quantity</label>
+					<input asp-for="Quantity" class="form-control" placeholder="Enter Quantity" required/>
+					<span asp-validation-for="Quantity" class="text-danger"></span>
+				</div>
+				<div class="mb-5">
+					<label asp-for="TotalPrice" class="form-label">Total Price</label>
+					<input asp-for="TotalPrice" class="form-control" step="0.01" placeholder="Enter Total Price" required />
+					<span asp-validation-for="TotalPrice" class="text-danger"></span>
+				</div>
+				<div class="mb-5">
+					<label asp-for="PurchaseDate" class="form-label">Purchase Date</label>
+					<input asp-for="PurchaseDate" class="form-control" type="date" required />
+					<span asp-validation-for="PurchaseDate" class="text-danger"></span>
+				</div>
+				<div class="d-flex justify-content-end mt-6">
+					<button type="submit" class="btn btn-primary px-4 me-3">
+						<i class="bg-info bi-check-circle"></i>Create
+					</button>
+					<a asp-action="Index" class="btn btn-secondary">
+						<i class="bi bi-x-circle"></i>Cancel
+					</a>
+				</div>
+            </form>
+        </div>
+    </div>
+</div>
+    
